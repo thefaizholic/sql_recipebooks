@@ -1,0 +1,99 @@
+------------------------------------------------------------
+
+CREATE OR REPLACE PROCEDURE GetRecipeDetails(
+    p_recipe_id IN VARCHAR2,
+    p_title OUT VARCHAR2,
+    p_instructions OUT VARCHAR2,
+    p_ingredients OUT VARCHAR2,
+    p_estimate_cost OUT INT
+) AS
+BEGIN
+    SELECT title, instructions, ingredients, estimate_cost
+    INTO p_title, p_instructions, p_ingredients, p_estimate_cost
+    FROM Recipes
+    WHERE recipe_id = p_recipe_id;
+
+    -- You can add additional logic or error handling if needed
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Recipe not found.');
+END GetRecipeDetails;
+/
+
+
+DECLARE
+    v_total_cost INT;
+BEGIN
+   
+    CalculateTotalCost('LM901', v_total_cost);
+
+   
+    DBMS_OUTPUT.PUT_LINE('Total Cost for Recipe WX789: ' || v_total_cost);
+END;
+/
+
+DECLARE
+    v_recipe_id VARCHAR2(5) := 'BC890'; -- Set the recipe_id you want to retrieve
+    v_title VARCHAR2(100);
+    v_instructions VARCHAR2(500);
+    v_ingredients VARCHAR2(500);
+    v_estimate_cost INT;
+BEGIN
+    -- Call the procedure with the appropriate parameters
+    GetRecipeDetails(v_recipe_id, v_title, v_instructions, v_ingredients, v_estimate_cost);
+
+    -- Display the result
+    DBMS_OUTPUT.PUT_LINE('Recipe ID: ' || v_recipe_id);
+    DBMS_OUTPUT.PUT_LINE('Title: ' || v_title);
+    DBMS_OUTPUT.PUT_LINE('Instructions: ' || v_instructions);
+    DBMS_OUTPUT.PUT_LINE('Ingredients: ' || v_ingredients);
+    DBMS_OUTPUT.PUT_LINE('Estimate Cost: ' || v_estimate_cost);
+END;
+/
+
+------------------------------------------------------------------------------
+
+
+CREATE OR REPLACE PROCEDURE CalculateTotalCost(
+    p_recipe_id IN VARCHAR2,
+    p_total_cost OUT INT
+) AS
+BEGIN
+    SELECT SUM(estimate_cost)
+    INTO p_total_cost
+    FROM Recipes
+    WHERE recipe_id = p_recipe_id;
+
+    -- You can add additional logic or error handling if needed
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('Recipe not found.');
+END CalculateTotalCost;
+/
+
+DECLARE
+    v_total_cost INT;
+BEGIN
+   
+    CalculateTotalCost('LM901', v_total_cost);
+
+   
+    DBMS_OUTPUT.PUT_LINE('Total Cost for Recipe WX789: ' || v_total_cost);
+END;
+/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

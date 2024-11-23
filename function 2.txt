@@ -1,0 +1,29 @@
+--function
+CREATE OR REPLACE FUNCTION get_total_reviews(p_recipe_id VARCHAR2)
+RETURN NUMBER
+IS
+  v_total_reviews NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO v_total_reviews
+  FROM review
+  WHERE recipe_id = p_recipe_id;
+
+  RETURN v_total_reviews;
+EXCEPTION
+  WHEN NO_DATA_FOUND THEN
+    RETURN 0; -- Handle the case where no reviews are found for the given recipe_id
+  WHEN OTHERS THEN
+    -- Handle other exceptions as needed
+    RETURN NULL;
+END get_total_reviews;
+
+--calling method
+
+set serveroutput on
+DECLARE
+  v_recipe_id VARCHAR2(50) := 'wx789'; -- Replace with the actual recipe_id
+  v_reviews_count NUMBER;
+BEGIN
+  v_reviews_count := get_total_reviews(v_recipe_id);
+  DBMS_OUTPUT.PUT_LINE('Total reviews for recipe ' || v_recipe_id || ': ' || v_reviews_count);
+END;

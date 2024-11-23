@@ -1,0 +1,22 @@
+--function 
+create or replace function allrecipescost
+return number is
+totalest_cost number (3) := 0;
+begin
+
+select sum (estimate_cost) into totalest_cost
+from recipes;
+
+return totalest_cost;
+
+end;
+
+--calling method
+set serveroutput on
+declare
+v_totalcost number;
+begin
+v_totalcost := ALLRECIPESCOST;
+
+DBMS_OUTPUT.PUT_LINE('TOTAL COST OF ALL RECIPES IS' || v_totalcost);
+end;

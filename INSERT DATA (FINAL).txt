@@ -1,0 +1,65 @@
+INSERT INTO Account_Details VALUES ('AB156', 'AliHEHE', 'Ahmad Ali', 'alisem@gmail.com', 'qsws123', '15Jan1985');
+INSERT INTO Account_Details VALUES ('AC085', 'WongJing', 'Wong Jing Jun', 'wong@gmail.com', 'koaz938', '22Mar1990');
+INSERT INTO Account_Details VALUES ('AK479', 'Salmah_69', 'Nur Salmah', 'salmah@gmail.com', 'bryc527', '05May1978');
+INSERT INTO Account_Details VALUES ('AR992', 'Alif_naqie29', 'Alif Naqiudin', 'alifnaqie@gmail.com', 'AnakItik@3301*', '29Oct2023');
+INSERT INTO Account_Details VALUES ('AE241', 'Muthu_71', 'Muthu Sami', 'muthu@gmail.com', 'hswp176', '10Jul2001');
+INSERT INTO Account_Details VALUES ('BC239', 'Afiqnajmi21', 'Muhammad Afiq Najmi', 'afiq@gmail.com', 'palw102', '18Sep1983');
+INSERT INTO Account_Details VALUES ('BH883', 'NabihahWOW', 'Siti Nabihah', 'nabihah@gmail.com', 'pwjmew82', '25Nov1995');
+INSERT INTO Account_Details VALUES ('CP204', 'LeeMin99', 'Lee Min Ho', 'leemin@gmail.com', 'hjevbd20', '30Apr1989');
+INSERT INTO Account_Details VALUES ('DA559', 'YatiSiti', 'Siti Yati', 'yati@gmail.com', 'wyqia92', '14Jun2005');
+INSERT INTO Account_Details VALUES ('EF829', 'Zubaidah56', 'Zubaidah', 'zubaidah@gmail.com', 'xedcb389', '27Aug1992');
+
+INSERT INTO Author VALUES ('AU391', 'Chinese cuisine', 'AB156');
+INSERT INTO Author VALUES ('X789Z', 'Indian Cuisine', 'AC085');
+INSERT INTO Author VALUES ('CD789', 'Indian Cuisine', 'AK479');
+INSERT INTO Author VALUES ('D456F', 'Malay Cuisine', 'AR992');
+INSERT INTO Author VALUES ('GH012', 'Chinese cuisine', 'AE241');
+INSERT INTO Author VALUES ('L321M', 'Western cuisine', 'BC239');
+INSERT INTO Author VALUES ('GHI78', 'Korean cuisine', 'BH883');
+INSERT INTO Author VALUES ('KL678', 'Korean cuisine', 'CP204');
+INSERT INTO Author VALUES ('OP234', 'Malay Cuisine', 'DA559');
+INSERT INTO Author VALUES ('MN901', 'Western Cuisine', 'EF829');
+
+INSERT INTO Recipe_Categories VALUES ('PQ678', 'Malay');
+INSERT INTO Recipe_Categories VALUES ('CD901', 'Western');
+INSERT INTO Recipe_Categories VALUES ('XY234', 'Indian');
+INSERT INTO Recipe_Categories VALUES ('RT012', 'Indian');
+INSERT INTO Recipe_Categories VALUES ('MN890', 'Chinese');
+INSERT INTO Recipe_Categories VALUES ('VW345', 'Malay');
+INSERT INTO Recipe_Categories VALUES ('GH789', 'Chinese');
+INSERT INTO Recipe_Categories VALUES ('RS123', 'Korean');
+INSERT INTO Recipe_Categories VALUES ('MN456', 'Western');
+INSERT INTO Recipe_Categories VALUES ('PW123', 'Indian');
+
+INSERT INTO Recipes VALUES ('WX789', 'Nasi lemak', 'Cook jasmine rice with coconut milk. Blend soaked dried chilies, shallots, garlic, and ginger for sambal. Sauté anchovies in oil, add chili paste, tamarind, palm sugar, and salt; cook until thick. Optionally, fry dried anchovies. Serve coconut rice with sambal, peanuts, fried anchovies, cucumber, and hard-boiled eggs. Garnish with fresh cucumber slices. ', 'Jasmine rice, Coconut milk, Dried chilies, Shallots, Garlic, Ginger, Anchovies, Oil, Chili paste, Tamarind, Palm sugar, Salt, Peanuts, Cucumber, Hard-boiled eggs, Fresh cucumber slices', 'D456F', 'PQ678',8);
+INSERT INTO Recipes VALUES ('YZ012', 'Roti canai', 'Mix 3 cups of flour, 1 tsp salt, and 1 tbsp condensed milk. Knead with water until soft, then let rest for 4 hours. Shape into balls, coat with ghee, and flatten thinly. Cook on a hot griddle with ghee until golden. Serve with dhal or chicken curry', '3 cups flour, 1 tsp salt, 1 tbsp condensed milk, Water, Ghee, Dhal or chicken curry (for serving)', 'OP234', 'PQ678',4);
+INSERT INTO Recipes VALUES ('OP345', 'Chicken chop', 'Marinate chicken in a mixture of salt, pepper, and soy sauce. Coat it with flour, dip in beaten eggs, and cover with breadcrumbs. Fry until golden brown and thoroughly cooked. Serve the crispy chicken with a side of fries, coleslaw, and blackpepper sauce', 'Chicken, Salt, Pepper, Soy sauce, Flour, Eggs, Breadcrumbs, Cooking oil, Fries, Coleslaw, Black pepper sauce', 'L321M', 'CD901',15);
+INSERT INTO Recipes VALUES ('QR678', 'Kimchi Fried Rice', 'Sauté chopped kimchi, stir-fry with cooked rice, and add soy sauce. Integrate vegetables, top with green onions, and a fried egg', 'Chopped kimchi, Cooked rice, Soy sauce, Vegetables (of your choice), Green onions, Eggs (for frying)', 'GHI78', 'RS123',20);
+INSERT INTO Recipes VALUES ('LM901', 'Stir-Fried Vegetables', 'In a hot pan, sauté bell peppers, broccoli, carrots, and snap peas. Stir-fry until crisp-tender, then season with soy sauce, sesame oil, salt, and pepper', 'Bell peppers, Broccoli, Carrots, Snap peas, Soy sauce, Sesame oil, Salt, Pepper', 'AU391', 'MN890',5);
+INSERT INTO Recipes VALUES ('ST234', 'Egg Drop Soup', 'Gently pouring beaten eggs into simmering chicken or vegetable broth, stirring to form delicate ribbons. Add green onions and a dash of soy sauce ', 'Beaten eggs, Chicken or vegetable broth, Green onions, Soy sauce', 'GH012', 'MN890',5);
+INSERT INTO Recipes VALUES ('EF567', 'Vegetable Biryani', 'Sautéing mixed vegetables, biryani masala, and parboiled rice. Cook until the rice is tender, creating a fragrant and flavorful dish. Garnish with fresh cilantro', 'Mixed vegetables, Biryani masala, Parboiled rice, Fresh cilantro (for garnish)', 'X789Z', 'XY234',25);
+INSERT INTO Recipes VALUES ('BC890', 'Spaghetti Bolognese', 'Indulge in a classic Spaghetti Bolognese by sautéing ground beef with onions, garlic, and tomatoes. Simmer in Italian herbs', 'Spaghetti,Ground beef, Onions, Garlic, Tomatoes, Italian herbs', 'MN901', 'CD901',15);
+INSERT INTO Recipes VALUES ('JK123', 'Chicken Curry', 'Cook tender chicken pieces in a fragrant blend of onions, tomatoes, and aromatic spices. Simmer until the chicken is succulent and infused with the spices. Garnish with fresh coriander', 'Chicken pieces, Onions, Tomatoes, Aromatic spices, Fresh coriander (for garnish)', 'CD789', 'XY234',23);
+INSERT INTO Recipes VALUES ('OP999', 'Tteokbokki', ' Chewy rice cakes are simmered in a fiery gochujang-based sauce, creating a perfect blend of sweet and spicy. Garnished with green onions and sesame seeds', 'Chewy rice cakes (tteok), Gochujang (Korean red pepper paste), Soy sauce, Sugar, Gochugaru (Korean red pepper flakes), Fish cakes (optional), Onion (sliced), Garlic (minced), Water or anchovy stock, Green onions (chopped for garnish), Sesame seeds (for garnish)', 'KL678', 'RS123',20);
+
+INSERT INTO Users VALUES('UID7642098','AB156'); 
+INSERT INTO Users VALUES('UID5318472','AC085'); 
+INSERT INTO Users VALUES('UID6248901','AK479'); 
+INSERT INTO Users VALUES('UID3097845','AR992'); 
+INSERT INTO Users VALUES('UID8765023','AE241'); 
+INSERT INTO Users VALUES('UID2157896','BC239'); 
+INSERT INTO Users VALUES('UID4901238','BH883'); 
+INSERT INTO Users VALUES('UID6578012','CP204'); 
+INSERT INTO Users VALUES('UID1345678','DA559'); 
+INSERT INTO Users VALUES('UID9234567','EF829');
+
+INSERT INTO Review VALUES('H8901', '7', 'Deliciously savory, bursting with flavor!', '15-Jan-2023 10:30', 'WX789', 'UID7642098'); 
+INSERT INTO Review VALUES('Y8901', '8', 'A symphony of tastes on my palate', '07-Nov-2023 11:20', 'YZ012', 'UID5318472'); 
+INSERT INTO Review VALUES('G7890', '6.9', 'Mouthwateringly divine bites!', '25-Apr-2023 08:15', 'OP345', 'UID6248901'); 
+INSERT INTO Review VALUES('D5678', '9', 'Perfectly seasoned, utterly satisfying', '18-Aug-2023 1:30', 'QR678', 'UID3097845'); 
+INSERT INTO Review VALUES('B9012', '8.6', 'Irresistibly tasty, pure culinary joy', '30-Jun-2023 09:45', 'ST234', 'UID8765023'); 
+INSERT INTO Review VALUES('J0123', '7', 'Exquisite flavors dancing on my tongue', '05-Dec-2023 12:10', 'EF567', 'UID2157896'); 
+INSERT INTO Review VALUES('D7890', '7.3', 'Gastronomic masterpiece, truly indulgent', '22-Feb-2023 4:35', 'BC890', 'UID4901238'); 
+INSERT INTO Review VALUES('K1234', '9.5', 'Sensationally good, a culinary triumph!', '19-Jul-2023 08:55', 'JK123', 'UID6578012'); 
+INSERT INTO Review VALUES('F6789', '8.6', 'Incredible blend of textures and tastes', '10-Oct-2023 2:00', 'OP999', 'UID1345678'); 
+INSERT INTO Review VALUES('G0123', '7.4', 'Tantalizingly good – a culinary delight!', '29-Oct-2023 3:00', 'LM901', 'UID9234567');
